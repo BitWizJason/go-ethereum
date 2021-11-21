@@ -36,7 +36,8 @@ lint: ## Run linters.
 	$(GORUN) build/ci.go lint
 
 clean:
-	set GO111MODULE=on go clean -cache
+	set GO111MODULE=on
+	go clean -cache
 	rm -fr build/_workspace/pkg/ $(GOBIN)/*
 
 # The devtools target installs tools required for 'go generate'.
